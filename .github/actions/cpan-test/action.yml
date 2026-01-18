@@ -29,8 +29,8 @@ runs:
       run: perl -V
       shell: bash
 
-    - name: Generate a Makefile
-      run:  perl Makefile.PL
+    - name: Install ExtUtils::MakeMaker
+      run:  cpanm ExtUtils::MakeMaker
       shell: bash
 
     - name: Install modules
