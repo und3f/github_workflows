@@ -27,7 +27,7 @@ runs:
 
     - name: Perl version
       run: perl -V
-      shell: bash
+      shell: echo "============="; pwd; bash;
 
     - name: Debug
       run: ls -al
