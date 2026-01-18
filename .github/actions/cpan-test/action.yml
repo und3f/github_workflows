@@ -36,6 +36,7 @@ runs:
     - name: Install ExtUtils::MakeMaker
       if: ${{ startsWith(inputs.os, 'windows') }}
       run: cpanm ExtUtils::MakeMaker
+      shell: bash
 
     - name: Install modules
       run: |
