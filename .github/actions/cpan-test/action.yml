@@ -29,6 +29,10 @@ runs:
       run: perl -V
       shell: bash
 
+    - name: Debug
+      run: ls -al
+      shell: bash
+
     - name: Install modules
       run: |
         cpanm --notest --with-configure --with-develop --no-man-pages --installdeps .
