@@ -33,6 +33,10 @@ runs:
       if: ${{ startsWith(inputs.os, 'windows') }}
       uses: ilammy/msvc-dev-cmd@v1
 
+    - name: Install ExtUtils::MakeMaker
+      if: ${{ startsWith(inputs.os, 'windows') }}
+      run: cpanm ExtUtils::MakeMaker
+
     - name: Install modules
       run: |
         cpanm --notest --with-configure --with-develop --no-man-pages --installdeps .
