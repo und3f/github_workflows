@@ -30,10 +30,6 @@ runs:
       run: perl -V
       shell: bash
 
-    - name: Install ExtUtils::MakeMaker
-      run:  cpanm ExtUtils::MakeMaker
-      shell: bash
-
     - name: Install modules
       run: |
         cpanm --notest --with-configure --with-develop --no-man-pages --installdeps .
