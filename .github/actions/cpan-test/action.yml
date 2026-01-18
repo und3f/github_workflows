@@ -27,10 +27,10 @@ runs:
 
     - name: Perl version
       run: perl -V
-      shell: echo "============="; pwd; bash;
+      shell: bash
 
     - name: Debug
-      run: ls -al
+      run:  echo "============="; pwd; ls -al;
       shell: bash
 
     - name: Install modules
