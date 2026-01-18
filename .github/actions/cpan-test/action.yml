@@ -29,8 +29,8 @@ runs:
       run: perl -V
       shell: bash
 
-    - name: Debug
-      run:  echo "============="; pwd; ls -al;
+    - name: Generate a Makefile
+      run:  perl Makefile.PL
       shell: bash
 
     - name: Install modules
