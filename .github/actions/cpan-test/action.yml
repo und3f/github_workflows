@@ -24,6 +24,7 @@ runs:
       uses: shogo82148/actions-setup-perl@v1
       with:
         perl-version: ${{ inputs.perl_version }}
+        distribution: strawberry
 
     - name: Perl version
       run: perl -V
