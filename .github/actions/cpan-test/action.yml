@@ -29,11 +29,9 @@ runs:
       run: perl -V
       shell: bash
 
-    - name: Install dmake on Windows
+    - name: Set up MSVC environment (install nmake)
       if: ${{ startsWith(inputs.os, 'windows') }}
-      run: |
-        cpanm dmake
-      shell: bash
+      uses: ilammy/msvc-dev-cmd@v1
 
     - name: Install modules
       run: |
