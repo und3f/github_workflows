@@ -24,18 +24,10 @@ runs:
       uses: shogo82148/actions-setup-perl@v1
       with:
         perl-version: ${{ inputs.perl_version }}
+        distribution: strawberry
 
     - name: Perl version
       run: perl -V
-      shell: bash
-
-    - name: Set up MSVC environment (install nmake)
-      if: ${{ startsWith(inputs.os, 'windows') }}
-      uses: ilammy/msvc-dev-cmd@v1
-
-    - name: Install ExtUtils::MakeMaker
-      if: ${{ startsWith(inputs.os, 'windows') }}
-      run: cpanm ExtUtils::MakeMaker
       shell: bash
 
     - name: Install modules
